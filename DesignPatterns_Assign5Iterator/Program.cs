@@ -10,6 +10,17 @@ namespace DesignPatterns_Assign5Iterator
     {
         static void Main(string[] args)
         {
+            Course c = new Course();
+
+            c.Add(new Student("Joe"));
+            c.Add(new Student("Bob"));
+
+            foreach(Student stud in c)
+            {
+                Console.WriteLine(stud.Name);
+            }
+
+            while (Console.Read() != 'q') ;
         }
     }
 }
