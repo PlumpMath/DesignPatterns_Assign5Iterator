@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
+/*Team Chrono
+ * Sam Arutyunyan, Jess Albrecht, James Felts
+ */
+ 
+ /*
  * James Felts
  */
 

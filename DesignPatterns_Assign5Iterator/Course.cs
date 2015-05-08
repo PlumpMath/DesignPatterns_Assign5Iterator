@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * James Felts
+/*Team Chrono
+ * Sam Arutyunyan, Jess Albrecht, James Felts
  */
 
+ /*
+ * James Felts
+ */
+ 
 namespace DesignPatterns_Assign5Iterator
 {
     //ICollection implements IEnumerable<T>
