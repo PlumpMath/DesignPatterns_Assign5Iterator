@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * James Felts
+ */
+
 namespace DesignPatterns_Assign5Iterator
 {
     class Program
@@ -15,7 +19,7 @@ namespace DesignPatterns_Assign5Iterator
             c.Add(new Student("Joe"));
             c.Add(new Student("Bob"));
             c.Add(new Student("Sam"));
-            c.Add(new Student("Enpty String"));
+            c.Add(new Student("Empty String"));
             c.Add(new Student("Dude"));
 
             foreach(Student stud in c)
@@ -23,7 +27,7 @@ namespace DesignPatterns_Assign5Iterator
                 Console.WriteLine(stud.Name);
             }
 
-            while (Console.Read() != 'q') ;
+            while (Console.Read() != 'q');
         }
     }
 }

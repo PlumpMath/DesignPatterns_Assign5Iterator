@@ -4,8 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * James Felts
+ */
+
 namespace DesignPatterns_Assign5Iterator
 {
+    //ICollection implements IEnumerable<T>
     class Course : ICollection<Student>
     {
         private List<Student> _ListOfStudentsInCourse;
@@ -14,7 +19,6 @@ namespace DesignPatterns_Assign5Iterator
         {
             _ListOfStudentsInCourse = new List<Student>();
         }
-
 
         public IEnumerator<Student> GetEnumerator()
         {
@@ -44,7 +48,7 @@ namespace DesignPatterns_Assign5Iterator
 
         public void CopyTo(Student[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            _ListOfStudentsInCourse.CopyTo(array, arrayIndex);
         }
 
         public int Count
@@ -54,7 +58,7 @@ namespace DesignPatterns_Assign5Iterator
 
         public bool IsReadOnly
         {
-            get { throw new NotImplementedException(); }
+            get { return false; }
         }
 
         public bool Remove(Student item)

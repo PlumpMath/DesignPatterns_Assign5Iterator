@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * James Felts
+ */
+
 namespace DesignPatterns_Assign5Iterator
 {
     struct Student
