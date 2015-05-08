@@ -18,10 +18,7 @@ namespace DesignPatterns_Assign5Iterator
 
         public IEnumerator<Student> GetEnumerator()
         {
-            for(int i = 0;i<_ListOfStudentsInCourse.Count;i++)
-            {
-                yield return _ListOfStudentsInCourse[i];
-            }
+            return new CourseEnumerator(_ListOfStudentsInCourse);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
@@ -63,6 +60,52 @@ namespace DesignPatterns_Assign5Iterator
         public bool Remove(Student item)
         {
             return _ListOfStudentsInCourse.Remove(item);
+        }
+
+        private class CourseEnumerator : IEnumerator<Student>
+        {
+            private List<Student> _ListOfStudentsInCourse;
+            private Student _cur;
+            private int _curIndex;
+
+            public CourseEnumerator(List<Student> input)
+            {
+                _ListOfStudentsInCourse = input;
+                _curIndex = -1;
+                _cur = default(Student);
+            }
+
+            public Student Current
+            {
+                get { return _cur; }
+            }
+
+            public void Dispose()
+            {}
+
+            object System.Collections.IEnumerator.Current
+            {
+                get { return Current; }
+            }
+
+            public bool MoveNext()
+            {
+                if(++_curIndex >= _ListOfStudentsInCourse.Count)
+                {
+                    return false;
+                }
+                else
+                {
+                    _cur = _ListOfStudentsInCourse[_curIndex];
+                }
+                return true;
+
+            }
+
+            public void Reset()
+            {
+                _curIndex = -1;
+            }
         }
     }
 }

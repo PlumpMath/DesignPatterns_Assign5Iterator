@@ -14,6 +14,9 @@ namespace DesignPatterns_Assign5Iterator
 
             c.Add(new Student("Joe"));
             c.Add(new Student("Bob"));
+            c.Add(new Student("Sam"));
+            c.Add(new Student("Enpty String"));
+            c.Add(new Student("Dude"));
 
             foreach(Student stud in c)
             {
